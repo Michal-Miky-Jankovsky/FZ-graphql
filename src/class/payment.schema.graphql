@@ -1,0 +1,10 @@
+type ValidatePaymentURL {
+    status: Boolean!,
+    errorMessage: String,
+    errorCode: Int,
+}
+
+type Query {
+    getPaymentURL(orderNumber: String!, vignetteType: String!, merOrderNumber: String!, returnURL: String!): String
+    validatePaymentURL(url: String!): ValidatePaymentURL
+}
